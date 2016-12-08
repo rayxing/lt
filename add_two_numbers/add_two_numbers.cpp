@@ -6,7 +6,11 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 #include <stdlib.h>
+#include <iostream>
+
+using namespace std;
 
 struct ListNode {
    int val;
@@ -64,13 +68,39 @@ public:
 };
 
 int main() {
+    ListNode * h1;
     ListNode * l1;
+
+    ListNode * h2;
     ListNode * l2;
-    ListNode * l3;
+
+    ListNode * h3;
 
     Solution s;
+    
+    //init list 1
+    h1 = new ListNode(2);
 
-    l3 = s.addTwoNumbers(l1, l2); 
+    h1->next = new ListNode(4);
+    l1 = h1->next;
+
+    l1->next = new ListNode(3);
+
+    //init list 2
+    h2 = new ListNode(5);
+
+    h2->next = new ListNode(6);
+    l2 = h2->next;
+
+    l2->next = new ListNode(4);
+
+
+    h3 = s.addTwoNumbers(h1, h2); 
+
+    while (h3 != NULL) {
+        cout << h3->val << endl;
+        h3 = h3->next;
+    }
 
     return 0;
 }
