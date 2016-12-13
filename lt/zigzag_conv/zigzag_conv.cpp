@@ -76,6 +76,7 @@ public:
 int main() {
 	Solution solution;
 	string s = "PAYPALISHIRING";
+	//string s = "A";
 	string res;
 	
 	res = solution.convert(s, 3);
