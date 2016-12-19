@@ -7,7 +7,6 @@ using namespace std;
 class Solution {
 public:
 	string convert(string s, int numRows) {
-		bool debug = false;
 
 		if (numRows <= 0)
 			return string("");
@@ -31,8 +30,7 @@ public:
 				break;				
 		}
 
-		if (debug)
-			cout << "col: " << col << endl;
+		cout << "col: " << col << endl;
 		
 		string ret = "";
 		int idx = 0;
@@ -43,17 +41,17 @@ public:
 					idx = (i/(numRows-1))*(2*numRows-2) + j;	
 
 					if (idx < len) {
-						if (debug) cout << "(" << j << "," << i << ") => " << idx << endl;
+						cout << "(" << i << "," << j << ") => " << idx << endl;
 
 						ret.push_back(s[idx]);
 					}
 				}	
 				else if ((i + j) % (numRows - 1) == 0) {
 					
-					idx = (i/(numRows-1))*(2*numRows-2) + numRows + (i%(numRows-1)) - 1;	
+					idx = (i/(numRows-1))*(2*numRows-2) + numRows + i - 1;	
 
 					if (idx < len) {
-						if (debug) cout << "(" << j << "," << i << ") => " << idx << endl;
+						cout << "(" << i << "," << j << ") => " << idx << endl;
 
 						ret.push_back(s[idx]);
 					}

@@ -16,10 +16,14 @@ public:
 		int range_n_high = n-1;
 		int range_m_low = 0;
 		int range_m_high = m-1;
-		int temp_n = 0;
-		int temp_m = 0;
+
+		int high_remain = 0;
+		int high_bound = 0;
+		int low_remain = 0;
+		int low_bound = 0;
 
 		do {
+			
 			(range_n_high - range_n_low + 1) / 2
 			
 			if (nums1[range_n_low] > )
